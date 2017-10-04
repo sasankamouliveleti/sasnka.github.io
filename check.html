@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Propeller Clock</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+</head>
+<body>
+<div id="nav">
+    <div class="navbar-fixed">
+        <nav class="red">
+            <div class="nav-wrapper container">
+                <a href="index.html" class="brand-logo">&nbsp;RCS@SASTRA</a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="login.html">Login</a></li>
+
+                </ul>
+                <ul id="nav-mobile" class="side-nav">
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+<div class="container">
+    <h3 >Propeller Clock</h3>
+    <p><strong>Done by</strong></p>
+    <hr>
+<p>NALLAPAREDDY TEJASWI</p>
+<p>RAMADEVI M</p>
+<p>HARENEE NARAYANAN</p>
+<p>&nbsp;</p>
+<p><strong>INTRODUCTION</strong></p>
+<hr />
+
+<p>Propeller is a term associated with a circular rotating object. As this project needs to rotate whole circuit assembly, there must be some prime mover attached to it. So, the term   Propeller. This projectusing bright light emitting diodes for displaying the characters and symbols on its assembly. That’s why this project is named as ‘PROPELLER LED DISPLAY ‘. This is the phenomenon which is related to vision capability of human eye by which an afterimage is thought to persist for approximately 1/25th of a second. So, if someone is observing the images at a rate of 25 images per second, then they appear to be continuous. The best example of this property is the red circle we observe when we rotate the firecracker or incense stick in circle.</p>
+<p>This project was started with a simple principle which is frequently encountered in our everyday life, which is Persistence of Vision. This phenomenon makes one feel fast moving/changing objects to appear continuous. A television is a common example; in which image is re-scanned every 25 times, thereby appear continuous.Further, a glowing objects if rotated in a circle at fast speed, it shows a continuous circle. By modifying this basic idea, 7 LEDs can be rotated in a circle, showing 7 concentric circles. But if these LEDs are switched at precise intervals, a steady display pattern can be shown. Existing systems do employ POV principle, but for displaying each pixel, individual LED is used. This results in a huge number of LEDs even for small sized displays. By using a propeller type display, LED count can be kept to a bare minimum. Even 7 LEDs can perform a task of over 525 LEDs. Applications can find their way into cost effective solutions for large public displays, information systems.</p>
+<p><strong>HARDWARE DESCRIPTION</strong></p>
+<hr />
+<p>&nbsp;</p>
+<p><strong><em> Led Module</em></strong></p>
+<p>LED module consisting of 7bright LED is fixedinanother side of the arm of our project. These LEDsare connected with each of the port pin of microcontroller, with a series current limiting resistor of 220 ohms.</p>
+<p><strong><em> </em></strong></p>
+<p><strong><em> DC Motor</em></strong></p>
+<p>Repeated scanning of the display is must for continuous vision. This task is achieved using circular rotation of the whole circuit assembly. So, we used a DC motor as the prime mover.</p>
+<p>&nbsp;</p>
+<p><strong><em> Mechanical Assembly</em></strong></p>
+<p>Mechanical assembly plays a vital role in proper time, by rotating the whole assembly in a circular path. The basic idea we developed is on our own by functioning of this project. The display is scanned</p>
+<p>each implementing and modifying different ways to do this.Following diagram shows the most reliable</p>
+<p>way  that we finally selected. Here, one major challenge was how to bring +5V supply to the spinning circuit. We tried the same by adopting two three different methods, but finally concluded on the method, as shown in the figure. As seen in the diagram, one supply connection (GND) is provided through the motor’s shaft. Other terminal (Vcc) is connected, by arranging a friction disc-brush arrangement. The brush keeps its contact with the disc so that current can be supplied. Most critical objective was to achieve pristine balance and overall good mechanical strength. For weight adjustment, we have provided one long screw, and weight can be attached or removed by adding / removing metallic bolts. If the assembly is balanced perfect, then it can achieve stability, and rotate at high RPMs too. This will improve the overall efficiency of this display<strong><em>.</em></strong></p>
+<p><em><strong>Arduino Uno</strong></em><em><strong>                                                                    </strong></em></p>
+<p>An Arduino board consists of an Atmel 8-bit AVR microcontroller with complementary components that facilitate programming and incorporation into other circuits. An important aspect of it is its standard connectors, which lets users connect the CPU board to a variety of interchangeable add-on modules known as shields. Some shields communicate with the Arduino board directly over various pins, but many shields are individually addressable via an I²C serial bus-so many shields can be stacked and used in parallel. Official Arduinos have used the megaAVR series of chips, specifically the ATmega8, ATmega168, ATmega328, ATmega1280, and ATmega2560. A handful of other processors have been used by Arduino compatibles. Most boards include a 5 volt linear regulator and a 16 MHz crystal oscillator (orceramic resonator in some variants), although some designs such as the LilyPad run at 8 MHz and dispense with the onboard voltage regulator due to specific form-factor restrictions. An Arduino&#8217;s microcontroller is also pre-programmed with a boot loader that simplifies uploading of programs to the on-chip flash memory, compared with other devices that typically need an external programmer. This makes using an Arduino more straightforward by allowing the use of an ordinary computer as the programmer.</p>
+<p><strong><em> </em></strong></p>
+<p><em>DC Power Supply:</em></p>
+<p>For microcontroller, as well as the DC motor, a regulated DC power supply is required. We have to provide +5V to the microcontroller, while +12V to the motor.</p>
+<p>&nbsp;</p>
+<p><strong>IMAGES OF OUR PROJECT</strong></p>
+<p><img class="alignnone  wp-image-493" src="http://www.rcssastra.com/wp-content/uploads/2015/07/Capture3-300x118.png" alt="Capture" width="496" height="195" /> <img class="alignnone  wp-image-494" src="http://www.rcssastra.com/wp-content/uploads/2015/07/Capture11-300x97.png" alt="Capture1" width="535" height="173" /></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>SOFTWARE DESCRIPTION</strong></p>
+<hr />
+<p>&nbsp;</p>
+<p><strong><em> </em></strong><strong><em>ALGORITHM </em></strong></p>
+<p>i)Write the code in the arduino software for our project based on the RPM of the motor.</p>
+<ol>
+    <li>ii) Assume four columns and seven rows for each letter. Accordingly design a letter.</li>
+</ol>
+<p>iii) Calculate the time delay for each column of every letter.</p>
+<p>iv)Once the code is finished , compile and upload the code into the microcontroller using USB connector.</p>
+<p><strong><em> </em></strong></p>
+<p><strong>TIME DELAY CALCULATION</strong></p>
+<hr />
+<p>&nbsp;</p>
+<p>This is the most important part of this project. We get the output i.e., led display properly if and only if the delay is exact and perfect. Below is the sample calculation if the motor speed is 1000 RPM.</p>
+<p>motor speed===1000 RPM<br />
+    time for one rotation===60 milliseconds<br />
+    radius =30cm<br />
+    perimeter=2*3.414*30=204.84~205<br />
+    width of led column=0.5cm ( this indicated the duration of led glow in terms of length of display)<br />
+    total number of columns(led)=205/0.5=410<br />
+    410 led =60 milliseconds<br />
+    one led(column) time=146 microseconds<br />
+    columns for each letter=6<br />
+    time for a letter=6*146=876 micro seconds<br />
+    length for letter=6*0.5=3<br />
+    total letters=205/3=68</p>
+<p><strong><em> </em></strong></p>
+<p><strong><em> </em></strong></p>
+<p><strong>PROGRAM</strong></p>
+<hr />
+<p>&nbsp;</p>
+<p>Here is a simple program to get the propeller led display. If you are unable to get the display,change the time delay according to the speed of your motor.</p>
+<p>void setup()//initialize the ports</p>
+<p>{</p>
+<p>pinMode(2,OUTPUT);</p>
+<p>pinMode(3,OUTPUT);</p>
+<p>pinMode(4,OUTPUT);</p>
+<p>pinMode(5,OUTPUT);</p>
+<p>pinMode(6,OUTPUT);</p>
+<p>pinMode(7,OUTPUT);</p>
+<p>pinMode(8,OUTPUT);}</p>
+<p>int xdelay=50;</p>
+<p>int ydelay=150;</p>
+<p>void loop()</p>
+<p>{</p>
+<p>digitalWrite(2,HIGH);</p>
+<p>digitalWrite(3,HIGH);</p>
+<p>digitalWrite(4,HIGH);</p>
+<p>digitalWrite(5,HIGH);</p>
+<p>digitalWrite(8,HIGH);</p>
+<p>digitalWrite(6,LOW);</p>
+<p>digitalWrite(7,LOW);</p>
+<p>delay(xdelay);</p>
+<p>digitalWrite(2,HIGH);</p>
+<p>digitalWrite(5,HIGH);</p>
+<p>digitalWrite(8,HIGH);</p>
+<p>digitalWrite(3,LOW);</p>
+<p>digitalWrite(4,LOW);</p>
+<p>digitalWrite(6,LOW);</p>
+<p>digitalWrite(7,LOW);</p>
+<p>delay(xdelay);</p>
+<p>digitalWrite(2,HIGH);</p>
+<p>digitalWrite(5,HIGH);</p>
+<p>digitalWrite(8,HIGH);</p>
+<p>digitalWrite(3,LOW);</p>
+<p>digitalWrite(4,LOW);</p>
+<p>digitalWrite(6,LOW);</p>
+<p>digitalWrite(7,LOW);</p>
+<p>delay(xdelay);</p>
+<p>digitalWrite(2,HIGH);</p>
+<p>digitalWrite(5,HIGH);</p>
+<p>digitalWrite(6,HIGH);</p>
+<p>digitalWrite(7,HIGH);</p>
+<p>digitalWrite(8,HIGH);</p>
+<p>digitalWrite(3,LOW);</p>
+<p>digitalWrite(4,LOW);</p>
+<p>delay(ydelay);</p>
+<p>digitalWrite(2,HIGH);</p>
+<p>digitalWrite(3,HIGH);</p>
+<p>digitalWrite(4,HIGH);</p>
+<p>digitalWrite(5,HIGH);</p>
+<p>digitalWrite(6,HIGH);</p>
+<p>digitalWrite(7,HIGH);</p>
+<p>digitalWrite(8,HIGH);</p>
+<p>delay(xdelay);</p>
+<p>digitalWrite(2,HIGH);</p>
+<p>digitalWrite(5,HIGH);</p>
+<p>digitalWrite(8,HIGH);</p>
+<p>digitalWrite(3,LOW);</p>
+<p>digitalWrite(4,LOW);</p>
+<p>digitalWrite(6,LOW);</p>
+<p>digitalWrite(7,LOW);</p>
+<p>delay(xdelay);</p>
+<p>digitalWrite(2,HIGH);</p>
+<p>digitalWrite(5,HIGH);</p>
+<p>digitalWrite(8,HIGH);</p>
+<p>digitalWrite(3,LOW);</p>
+<p>digitalWrite(4,LOW);</p>
+<p>digitalWrite(6,LOW);</p>
+<p>digitalWrite(7,LOW);</p>
+<p>delay(xdelay);</p>
+<p>digitalWrite(2,HIGH);</p>
+<p>digitalWrite(5,HIGH);</p>
+<p>digitalWrite(8,HIGH);</p>
+<p>digitalWrite(3,LOW);</p>
+<p>digitalWrite(4,LOW);</p>
+<p>digitalWrite(6,LOW);</p>
+<p>digitalWrite(7,LOW);</p>
+<p>delay(ydelay);</p>
+<p>digitalWrite(2,HIGH);</p>
+<p>digitalWrite(3,HIGH);</p>
+<p>digitalWrite(4,HIGH);</p>
+<p>digitalWrite(5,HIGH);</p>
+<p>digitalWrite(6,HIGH);</p>
+<p>digitalWrite(7,HIGH);</p>
+<p>digitalWrite(8,HIGH);</p>
+<p>delay(xdelay);</p>
+<p>digitalWrite(2,HIGH);</p>
+<p>digitalWrite(5,HIGH);</p>
+<p>digitalWrite(8,HIGH);</p>
+<p>digitalWrite(3,LOW);</p>
+<p>digitalWrite(4,LOW);</p>
+<p>digitalWrite(6,LOW);</p>
+<p>digitalWrite(7,LOW);</p>
+<p>delay(xdelay);</p>
+<p>digitalWrite(2,HIGH);</p>
+<p>digitalWrite(5,HIGH);</p>
+<p>digitalWrite(8,HIGH);</p>
+<p>digitalWrite(3,LOW);</p>
+<p>digitalWrite(4,LOW);</p>
+<p>digitalWrite(6,LOW);</p>
+<p>digitalWrite(7,LOW);</p>
+<p>delay(xdelay);</p>
+<p>digitalWrite(2,HIGH);</p>
+<p>digitalWrite(5,HIGH);</p>
+<p>digitalWrite(8,HIGH);</p>
+<p>digitalWrite(3,LOW);</p>
+<p>digitalWrite(4,LOW);</p>
+<p>digitalWrite(6,LOW);</p>
+<p>digitalWrite(7,LOW);</p>
+<p>delay(ydelay);</p>
+<p>digitalWrite(2,HIGH);</p>
+<p>digitalWrite(3,HIGH);</p>
+<p>digitalWrite(4,HIGH);</p>
+<p>digitalWrite(5,HIGH);</p>
+<p>digitalWrite(6,HIGH);</p>
+<p>digitalWrite(7,HIGH);</p>
+<p>digitalWrite(8,HIGH);</p>
+<p>delay(xdelay);</p>
+<p>digitalWrite(2,HIGH);</p>
+<p>digitalWrite(5,HIGH);</p>
+<p>digitalWrite(8,HIGH);</p>
+<p>digitalWrite(3,LOW);</p>
+<p>digitalWrite(4,LOW);</p>
+<p>digitalWrite(6,LOW);</p>
+<p>digitalWrite(7,LOW);</p>
+<p>delay(xdelay);</p>
+<p>digitalWrite(2,HIGH);</p>
+<p>digitalWrite(5,HIGH);</p>
+<p>digitalWrite(8,HIGH);</p>
+<p>digitalWrite(3,LOW);</p>
+<p>digitalWrite(4,LOW);</p>
+<p>digitalWrite(6,LOW);</p>
+<p>digitalWrite(7,LOW);</p>
+<p>delay(xdelay);</p>
+<p>digitalWrite(2,HIGH);</p>
+<p>digitalWrite(5,HIGH);</p>
+<p>digitalWrite(8,HIGH);</p>
+<p>digitalWrite(3,LOW);</p>
+<p>digitalWrite(4,LOW);</p>
+<p>digitalWrite(6,LOW);</p>
+<p>digitalWrite(7,LOW);</p>
+<p>delay(ydelay);</p>
+<p>}</p>
+<p><em> </em></p>
+<p><em> </em></p>
+<p><strong>Applications</strong></p>
+<hr />
+
+<p>Applications can find their way into cost effective solutions for large public displays,information systems. It can directly replace Railway station information displays, bus-stands and many more places.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong> </strong></p>
+
+</div><!-- .entry-content -->
+
+
+</article><!-- #post-## -->
+</main><!-- #main -->
+</div><!-- #primary -->
+
+</body>
+</html>

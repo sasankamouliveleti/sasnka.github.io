@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Stringless Harp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+</head>
+<body>
+<div id="nav">
+    <div class="navbar-fixed">
+        <nav class="red">
+            <div class="nav-wrapper container">
+                <a href="index.html" class="brand-logo">&nbsp;RCS@SASTRA</a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="login.html">Login</a></li>
+
+                </ul>
+                <ul id="nav-mobile" class="side-nav">
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+<div class="container">
+    <h3 >StringLess Harp</h3>
+<h5><strong>Done by</strong></h5>
+<hr />
+
+<ul>
+    <li>A.Ramya Sree</li>
+    <li>K.Naga Sowmya</li>
+    <li>Gaurav</li>
+</ul>
+<h5><strong>Abstract</strong></h5>
+<hr />
+
+<p>Our aim is to make a light sensitive string less harp. Our basic idea involved includes a transparent photo diode sensing the light falling on it. Once the light is blocked the ir gives change in output which is coded accordingly using arduino and converted into sound signals and given to speakers.<br />
+    Technically, the project is an electronic musical instrument consisting of several light beams to be blocked, in analogy with the plucking of the strings of a harp, in order to produce sounds. It is an autonomous project which works using a microcontroller &#8211; ARDUINO UNO and based on simple arduino coding.</p>
+<h5><strong>Components required</strong></h5>
+<hr />
+<ul>
+    <li>Arduino Uno board</li>
+    <li>Bread board</li>
+    <li>Light source</li>
+    <li>Speaker</li>
+    <li>Transparent photo diodes</li>
+    <li>10ohm and 100k resistors</li>
+    <li>Connecting wires</li>
+</ul>
+
+<h5><strong>Connections and procedure</strong></h5>
+<hr />
+<p>The transparent photodiode is connected to the analog pin a0 which is the input pin. Here photo diode detects the light falling on it and its frequency and then the output processed is given to the analog pin. In this setup an led is used as an indicator for the light detection in the photodiode. The output from the arduino is given as input to the speaker. The coding is done such that when if light falling on it is blocked then the speaker should play the tone assigned. In the caser there is no light falling on the photodiodes the note assigned to the corresponding analog pin is played.</p>
+<h4><em>Here are some pictures of the project</em></h4>
+<p><a href="http://www.rcssastra.com/wp-content/uploads/2015/07/harp_1.png"><img class="alignnone size-medium wp-image-230" src="http://www.rcssastra.com/wp-content/uploads/2015/07/harp_1-300x226.png" alt="harp_1" width="300" height="226" /></a></p>
+<p><a href="http://www.rcssastra.com/wp-content/uploads/2015/07/harp_2.png"><img class="alignnone size-medium wp-image-231" src="http://www.rcssastra.com/wp-content/uploads/2015/07/harp_2-300x226.png" alt="harp_2" width="300" height="226" /></a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>The rest of the photo diodes are also connected similarly to analog pins A1, A2, A3.</p>
+<p>In this project we have selected the notes of the violin to be played, assigning each note to each of the four analog pins. The notes are NOTE_G3, NOTE_D4, NOTE_A4, and NOTE_E5. Different tones can be selected from arduino music library. These notes correspond to the notes used to tune the violin strings. The table gives their frequencies of the violin notes.</p>
+<p><a href="http://www.rcssastra.com/wp-content/uploads/2015/07/harp_3.png"><img class="alignnone wp-image-232" src="http://www.rcssastra.com/wp-content/uploads/2015/07/harp_3-300x126.png" alt="harp_3" width="486" height="204" /></a></p>
+<p>.</p>
+<p>The speaker in connected as shown in the diagram using a 100ohm resistor. The digital pin8 of the arduino i.e., the output pin of the board is connected to the speaker.</p>
+<p><a href="http://www.rcssastra.com/wp-content/uploads/2015/07/harp_4.png"><img class="alignnone wp-image-233" src="http://www.rcssastra.com/wp-content/uploads/2015/07/harp_4-300x254.png" alt="harp_4" width="462" height="391" /></a></p>
+
+
+<h5><strong>Coding</strong></h5>
+<hr />
+
+<p>#define NOTE_G3 196<br />
+    #define NOTE_D4 294<br />
+    #define NOTE_A4 440<br />
+    #define NOTE_E5 659<br />
+    int notes[] = {NOTE_G3,NOTE_D4,NOTE_A4,NOTE_E5};<br />
+    void setup()<br />
+    { pinMode(A0,INPUT);<br />
+    pinMode(A1,INPUT);<br />
+    pinMode(A2,INPUT);<br />
+    pinMode(A3,INPUT);</p>
+<p>pinMode(9,OUTPUT);</p>
+<p>Serial.begin(9600);<br />
+    }</p>
+<h6>void loop()<br />
+    {<br />
+    for (int thisSensor = 0; thisSensor &lt; 4; thisSensor++) {<br />
+    // get a sensor reading:<br />
+    int sensorReading = analogRead(thisSensor);<br />
+    Serial.println(sensorReading);<br />
+    delay(1000);<br />
+    if(sensorReading &lt;650)<br />
+    tone(9, notes[thisSensor], 1000);<br />
+    if (sensorReading == LOW)<br />
+    {<br />
+    // play the note corresponding to this sensor:<br />
+    tone(9, notes[thisSensor-2], 100);//THIS WILL PLAY THE RESPECTIVE NOTE //FOR 100ms*/<br />
+    }<br />
+    }</h6>
+<h5></h5>
+<h5><strong>Conclusion</strong></h5>
+<hr />
+<p>Over the period of time we faced challenges due to insufficient intensity light that is used to focus on the photodiodes. We found that use of laser light will be a better option. A line laser can be used else a point laser can be diffracted accordingly on all the photodiodes. Thus a simple light harp is done using arduino. By adding some extensions other musical instruments can also be made.</p>
+
+<h5><strong>References</strong></h5>
+<hr />
+<ul>
+    <li>Video tutorials from www.instructables.com.</li>
+    <li>Introduction to arduino from arduino.cc</li>
+    <li>Search results from Google and YouTube.</li>
+</ul>
+</div>
+
+
+</body>
+</html>

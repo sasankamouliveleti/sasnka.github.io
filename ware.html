@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Warehouse Management Bot</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+</head>
+<body>
+<div id="nav">
+    <div class="navbar-fixed">
+        <nav class="red">
+            <div class="nav-wrapper container">
+                <a href="index.html" class="brand-logo">&nbsp;RCS@SASTRA</a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="login.html">Login</a></li>
+
+                </ul>
+                <ul id="nav-mobile" class="side-nav">
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+<div class="container">
+    <h4 >Warehouse Management Bot</h4>
+    <br>
+    <h5><strong>DONE BY</strong></h5>
+    <hr />
+
+    <ul>
+        <li> SUJANA NETHI, IIIyr CSE</li>
+        <li> N.SUSHMITHA, IIIyr CSE</li>
+        <li> V.M.SOWMIYA, IIIyr ECE</li>
+    </ul>
+    <p>&nbsp;</p>
+    <h5><strong>ABSTRACT</strong></h5>
+    <hr />
+    <p>The aim of this project is to build an automated warehouse managing robot that constantly mechanizes the storage and arrangement of goods in a warehouse. The robot is to finish the job within given time and space constraints as time plays a major role these days. The identification of different goods or items is done by sensing the color of the outer covering of the blocks using color sensors. This application greatly reduces the number of humans involved in managing the warehouse. It reduces the errors which can occur to least possibility.</p>
+    <p>The bot checks for colored packets around the arena, differentiates the colors, picks up the blocks if they are not black, and place them in their respective deposition zones. If it finds a black block, it produces a buzzer sound for a particular amount of time.</p>
+    <p>&nbsp;</p>
+    <h5><strong>INTRODUCTION</strong></h5>
+    <hr />
+    <p>&nbsp;</p>
+    <p>Warehouse management system is vital in storage and movement of goods. Online purchasing has gained tremendous popularity among people of all generations and this entails receiving orders, packaging, transportation, storage and shipment. Goods are packaged in cartons of defined sizes &#8212; received, stored and shipped from a warehouse. Given that storage is vital in the supply chain, optimizing storage space through proper placement of packages such that movement of packages is minimized, is the key. Automating the process of receiving the packages, placing them in correct locations in the warehouse reduces manual labor and avoids damage to the packages. Moreover, Warehouses are very large storage units. It is very difficult to maintain such warehouses by human power. It requires perfect communication and coordination between people which is prone to errors. These errors if occurred on slightly large extent, will become a problem.</p>
+    <p>&nbsp;</p>
+    <h4><strong>Building Modules used in this project</strong></h4>
+    <hr />
+    <h5><strong><em>Electronic Components</em></strong></h5>
+    <ul>
+        <li> Microcontroller<br />
+            The major(master) controller used is ATmega 2560.<br />
+            The auxillary(slave) controller used is ATmega 8.</li>
+    </ul>
+    <h5><em><strong>Sensors</strong></em></h5>
+    <ul>
+        <li> Sharp IR sensors: These sensors are used to find whether there is  any object in its path. If it finds an object, it may trigger the color  sensor to detect the object’s color and do the necessary option like  picking it up and placing it in the corresponding place. It has IR led  and CCD array. The rays from IR led hits the obstacle and reflects  back to the CCD array. With the angle of incidence, the distance of t  he object can be calculated.</li>
+    </ul>
+    <ul>
+        <li> Infrared proximity sensors: These are similar to the Sharp IR  sensors but can only detect obstacles in a small range. Their  sensitivity is around 10cm.</li>
+        <li> White Line Sensor: This is used to make the firebird bot move on a  specific line of path. The bot has to move around a specific black  color line to achieve the target. This can be achieved using the  highly directional white line sensor. It has a bright red LED, whose  light gets reflected back if it is on white surface and gets reflected a  little if it is on black line. Hence, localization can be achieved.</li>
+        <li>Ultrasonic sensors: It can be used as an alternate for sharp IR sensor. It can be kept as a backup.</li>
+        <li>Color sensors: The color sensor checks for the color of the package.</li>
+        <li>If the pulses value of all the colors are below the threshold value, 1600 say, then the package is said to be of black color and the package is left unpicked.</li>
+        <li>If the pulses value of red is more, then the package is of red color and the package is picked and placed in the respective deposition zone.</li>
+        <li>If the pulses value of green is more, then the package is of green color and the package is picked and placed in the respective deposition zone.</li>
+        <li>If the pulses value of blue is more, then the package is of blue color  and the package is picked and placed in the respective deposition  zone.</li>
+        <li>Thus, color of the package is detected.</li>
+    </ul>
+    <p>&nbsp;</p>
+    <h5><strong>PLACEMENT OF SENSORS</strong></h5>
+    <hr />
+    <p>&nbsp;</p>
+    <p><a href="http://www.rcssastra.com/wp-content/uploads/2015/07/sensor-bottomview.png">    <img class="alignnone  wp-image-499" src="http://www.rcssastra.com/wp-content/uploads/2015/07/Capture31-300x269.png" alt="Capture3" width="488" height="438" /> <img class="alignnone  wp-image-498" src="http://www.rcssastra.com/wp-content/uploads/2015/07/Capture21-300x229.png" alt="Capture2" width="474" height="362" /> <img class="alignnone  wp-image-497" src="http://www.rcssastra.com/wp-content/uploads/2015/07/Capture12-300x249.png" alt="Capture1" width="480" height="398" /> <img class="alignnone  wp-image-496" src="http://www.rcssastra.com/wp-content/uploads/2015/07/Capture4-300x141.png" alt="Capture" width="472" height="222" /></a></p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <h5><strong>Justification of placement of sensors</strong></h5>
+    <hr />
+    <p>The bot has to detect the presence of a package when it reaches the position where they are placed. That is where we use sharp IR sensors. So we place the sensor on the front side. After detecting the presence of the package, we have to check the color of the package, so we have to place the color sensor in the front. There is no hinderence for any sensor and we can get accurate values from each.</p>
+    <h5><em><strong>Indicators</strong></em></h5>
+    <p><strong>LCD</strong>: LCD is used to display any message on the run. It can be used to display any error or exception messages or it can be used to display “successful” message after the task is over<br />
+        <strong>Buzzer:</strong> According to our task, buzzer must be on, if the bot finds a black object and also there must be a long buzzer after the task is completely over. For these reasons, a 3 KHz piezo buzzer is used.</p>
+    <p>&nbsp;</p>
+    <h5><strong>Mechanical Components</strong></h5>
+    <hr />
+    <p>&nbsp;</p>
+    <p>Robotic arm for picking up/placing the packages in the arena<br />
+        Only one arm is going to be mounted on the bot as that will suffice the purpose of picking and placing. That arm will be placed on the front. The bot will be facing the package which has to be picked up. So, it will be easy if the arm is mounted on the front. It will pick the package, and drop it in its corresponding deposition zone according to the algorithm. As there is only one arm, it will be challenging to place the arm on either side. If the arm is placed on the back, it may disturb the motion of the bot and free movement of arm mechanism can’t be ensured. Having all these arguments into considerations, front end is chosen to have the robotic arm.<br />
+        Diagram shows how a robotic arm is mounted on the robot and also the mounting of color sensor.</p>
+    <p><em>ARM MECHANISM FRONT VIEW</em></p>
+    <p><img class="alignnone  wp-image-500" src="http://www.rcssastra.com/wp-content/uploads/2015/07/Capture41-300x224.png" alt="Capture4" width="473" height="353" /></p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p><em>SIDE VIEW OF ARM MECHANISM</em></p>
+    <p>&nbsp;</p>
+    <p><img class="alignnone  wp-image-505" src="http://www.rcssastra.com/wp-content/uploads/2015/07/Capture7-300x222.png" alt="Capture7" width="462" height="342" /></p>
+    <h4><strong>Actuators used to design the robotic arm</strong></h4>
+    <hr />
+    <p>&nbsp;</p>
+    <h5><em><strong>DC Motors</strong></em></h5>
+    <p>DC (Direct Current) Motors are two wire (power &amp; ground), continuous rotation motors. When we supply power, a DC motor will start spinning until that power is removed. Most DC motors run at a high RPM (revolutions per minute).</p>
+    <p>The speed of DC motors is controlled using pulse width modulation (PWM), a technique of rapidly pulsing the power on and off. The percentage of time spent cycling the on/off ratio determines the speed of the motor then the motor will spin at half the speed of 100%. Each pulse is so rapid that the motor appears to be continuously spinning with no stuttering.</p>
+    <h5><em><strong>Servo Motors</strong></em></h5>
+    <p>Servo motors are generally an assembly of four things: a DC motor, a gearing set, a control circuit and a position-sensor (usually a potentiometer).</p>
+    <p>The position of servo motors can be controlled more precisely than those of standard DC motors, and they usually have three wires (power, ground &amp; control). Power to servo motors is constantly applied, with the servo control circuit regulating the draw to drive the motor. Servo motors are designed for more specific tasks where position needs to be defined accurately such as controlling the rudder on a boat or moving a robotic arm or robot leg within a certain range.</p>
+    <p>Servo motors do not rotate freely like a standard DC motor. Instead the angle of rotation is limited to 180 Degrees (or so) back and forth. Servo motors receive a control signal that represents an output position and applies power to the DC motor until the shaft turns to the correct position, determined by the position sensor.</p>
+    <p>PWM is used for the control signal of servo motors. However, unlike DC motors it’s the duration of the positive pulse that determines the position, rather than speed, of the servo shaft. A neutral pulse value dependent on the servo (around 1.5ms) keeps the servo shaft in the center position. Increasing that pulse value will make the servo turn clockwise, and a shorter pulse will turn the shaft anticlockwise. The servo control pulse is usually repeated every 20 milliseconds, essentially telling the servo where to go, even if that means remaining in the same position.</p>
+    <p>When a servo is commanded to move, it will move to the position and hold that position, even if external force pushes against it. The servo will resist from moving out of that position, with the maximum amount of resistive force the servo can exert being the torque rating of that servo.</p>
+    <h5><em><strong>Stepper Motors</strong></em></h5>
+    <p>A stepper motor is essentially a servo motor that uses a different method of motorization. Where a servo motor uses a continuous rotation DC motor and integrated controller circuit, stepper motors utilize multiple toothed electromagnets arranged around a central gear to define position.</p>
+    <p>Stepper motors require an external control circuit or micro controller (e.g. a Raspberry Pi or Arduino) to individually energize each electromagnet and make the motor shaft turn. When electromagnet ‘A’ is powered it attracts the gear’s teeth and aligns them, slightly offset from the next electromagnet ‘B’. When ‘A’ is switch off, and ‘B’ switched on, the gear rotates slightly to align with ‘B’, and so on around the circle, with each electromagnet around the gear energizing and de-energizing in turn to create rotation. Each rotation from one electromagnet to the next is called a &#8220;step&#8221;, and thus the motor can be turned by precise pre-defined step angles through a full 360 Degree rotation.</p>
+    <p>Stepper motors are available in two varieties; unipolar or bipolar. Bipolar motors are the strongest type of stepper motor and usually have four or eight leads. They have two sets of electromagnetic coils internally, and stepping is achieved by changing the direction of current within those coils. Unipolar motors, identifiable by having 5, 6 or even 8 wires, also have two coils, but each one has a center tap. Unipolar motors can step without having to reverse the direction of current in the coils, making the electronics simpler. However, because the center tap is used to energize only half of each coil at a time they typically have less torque than bipolar.</p>
+    <p>The design of the stepper motor provides a constant holding torque without the need for the motor to be powered and, provided that the motor is used within its limits, positioning errors don&#8217;t occur, since stepper motors have physically pre-defined stations.</p>
+    <p>&nbsp;</p>
+    <h4><strong>Power Management</strong></h4>
+    <hr />
+    <p>For this project, we use Fire Bird V bot. Fire Bird V is powered by 9.6V rechargeable on-board intelligent Nickel Metal Hydride battery pack. The battery should be charged by providing a voltage supply between 12V (fully charged) to 8V (discharged). Avoid using external charger for accidental damage to the batteries and may even cause permanent damage.<br />
+        The Fire Bird V Power Management block performs the following functions:</p>
+    <p>1. Battery voltage monitoring and Smart battery charging</p>
+    <p>2. Regulated supply for on-board payload</p>
+    <p>3. Battery current sensing (optional).</p>
+    <p>&nbsp;</p>
+    <p>The power is supplied to:</p>
+    <p>1. The processing unit requires 5V, 1A of regulated power supply</p>
+    <p>2. DC motors require 12V and 300mA current. (Provided by motor</p>
+    <p>driver L293D).</p>
+    <p>3. White line sensors and IR proximity sensors are 3.3V sensor.</p>
+    <p>4. Sharp IR sensors require 5V of power supply.</p>
+    <p>5. Servo motor pod requires 5V.</p>
+    <h4><strong><em>ARENA ANALYSIS</em></strong></h4>
+    <hr />
+    <p><img class="alignnone  wp-image-502" src="http://www.rcssastra.com/wp-content/uploads/2015/07/Capture6-300x219.png" alt="Capture6" width="476" height="347" /><br />
+        <em><strong>Navigation Scheme</strong></em></p>
+    <p>The white line sensors are used for line following mechanism</p>
+    <hr />
+    <ul>
+        <li>At first, the robot senses the block present to its immediate left and places it in one of its nearest deposition zones</li>
+        <li>It then moves to the next nearest pick-up point and follows the above mechanism for deposition</li>
+        <li>The gripper is used to hold the block firmly</li>
+        <li>The arm mechanism makes sure the block placing is within the deposition zone</li>
+        <li>If the color sensor senses the block to be black then it just buzzers for a second and moves to the next nearest pick-up point</li>
+        <li>A counter is maintained for each deposition zone to note the number of blocks deposited in it</li>
+        <li>If the blocks are 2 then no more are deposited in it</li>
+        <li>If there is no free deposition-sites present for a block it is left unpicked</li>
+        <li>IR proximity sensors are used for calculating the distance between the bot and the block</li>
+        <li>It is made the robot stops at an appropriate distance from the block to sense the color and pick it up using the arm</li>
+        <li>If the deposition zone is the fifth one it moves to approximately the nearest one from there</li>
+        <li>A note is also made whether a pick-up site is already tested or not</li>
+        <li>Once visited pick-up sites are not re-visited</li>
+        <li>An LED is glows after every successful deposition</li>
+        <li>Buzzer is blown after the completion of the task</li>
+    </ul>
+    <p>&nbsp;</p>
+    <h5><strong>Algorithm Analysis</strong></h5>
+    <hr />
+    <p>&nbsp;</p>
+    <h5><em><strong>The DATA STRUCTURES used</strong></em></h5>
+    <p>Direction N E S W for north east south and west respectively.<br />
+        Struct position{<br />
+        Current-tuple<br />
+        position<br />
+        direction<br />
+        location } current,next; //for taking in the current position and next position details.<br />
+        V1=(0,0,0,} V2={0,0,0} V3={0,0,0} V4={0,0,0} for visiting details of packages in tuples<br />
+        T1={1,2,3} T2={5,6,7} T3={1,2,3} T4={5,6,7} the position convention used for numbering the packages in tiples<br />
+        The horizontal nodes i.e. where three IR sensors can detect a black line are numbered from 0 to 8 and 0 points to LEFT and 8 points to RIGHT 4 to CENTRE<br />
+        Struct color{<br />
+        slot[4][3]}GREEN,RED,BLUE; //for defining the deposition site details.<br />
+        N1={1,2,3,4};N2={2,1,4,3};N3={3,4,1,2};N4={4,3,2,1}// for the priorities to choose for the next searching tuple from current tuple.</p>
+    <h5><strong>CONCLUSION</strong></h5>
+    <hr />
+
+    <p>Over the period of the project, we faced many difficulties. The crucial difficulty we faced was with line following because of various light conditions. Another problem we faced was with the gripper. The gripper was not strong enough to lift the lock and hold it for a certain period of time. But then, we soon overcame these difficulties and completed this project, which can be industrialized for warehouse management.</p>
+
+</div>
+</div>
+
+
+</body>
+</html>
